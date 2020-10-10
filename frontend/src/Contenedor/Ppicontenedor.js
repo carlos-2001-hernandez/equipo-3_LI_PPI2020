@@ -28,6 +28,7 @@ export default function Ppicontainer() {
       <Route path="/Citas" exact component={Citas} />
       <Route path="/Perfil" exact component={Perfil} />
       <Route path="/Mapa" exact component={Mapa} />
+      
     </BrowserRouter>
     
     

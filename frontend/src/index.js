@@ -9,3 +9,11 @@ import Ppicontenedor from"./Contenedor/Ppicontenedor"
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(<Ppicontenedor />, rootElement);
+ 
+     
+    
+  
+  
+ 
+    
+   
