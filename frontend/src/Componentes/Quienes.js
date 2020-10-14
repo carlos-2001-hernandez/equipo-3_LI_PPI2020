@@ -30,9 +30,12 @@ export const Quienes = () => {
                 </Link>
               </li>
               <li className="nav-item active">
+              <Link className="nav-link" to="/Propietario">
                 <a className="nav-link" href="/">
                   Soy propietario<span className="sr-only">(current)</span>
                 </a>
+                </Link>
+                
               </li>
             </ul>
             <form className="form-inline my-2 my-lg-0">

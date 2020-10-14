@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Link, whitRouter } from 'react-router-dom';
+
 export const Formulario = () => {
   return (
     <div className="Formulario form-group container py-5">
@@ -80,11 +82,13 @@ export const Formulario = () => {
         <div className="form-group">
           <div className="form-check"></div>
         </div>
+
         <div align="center">
-          <button type="submit" className="btn btn-outline-danger">
-            Siguiente
-          </button>
-          
+        <Link className="button" to="/Galeria">
+            <button type="submit" className="btn btn-outline-danger">
+              Siguiente
+            </button>
+          </Link>
         </div>
       </form>
     </div>

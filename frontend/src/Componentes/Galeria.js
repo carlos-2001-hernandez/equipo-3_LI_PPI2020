@@ -106,7 +106,7 @@ export const Galeria = () => {
           </div>
         </div>
       </div>
-      <div align="center"><Link className="btn btn-outline-danger" to="/Formulario" role="button">Siguiente</Link> </div>
+      <div align="center"><Link className="btn btn-outline-danger" to="/Mapa" role="button">Siguiente</Link> </div>
      
       </div>
       

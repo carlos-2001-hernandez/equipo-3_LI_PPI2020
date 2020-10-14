@@ -1,5 +1,6 @@
 import React from "react";
 import "../Style/Iniciar.css";
+import { Link, whitRouter } from "react-router-dom";
 export const Iniciar = () => {
   return (
     <div className="Iniciar text-center">
@@ -10,7 +11,9 @@ export const Iniciar = () => {
   <input type="email" id="inputEmail" className="form-control" placeholder="Correo" required="" autofocus=""/>
   <label for="inputPassword" className="sr-only">Password</label>
   <input type="password" id="inputPassword" className="form-control" placeholder="Contraseña" required=""/>
+  <Link className="button" to="/Mapa">
   <button className="btn btn-outline-danger  btn-block" type="submit">Iniciar</button>
+  </Link>
   <button className="btn btn-outline-danger  btn-block" type="submit">Iniciar con Facebook</button>
   <button className="btn btn-outline-danger  btn-block" type="submit">Iniciar con google
   </button>

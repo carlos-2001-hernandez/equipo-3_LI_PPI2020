@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@firebase/database": "0.6.13",
     "bootstrap": "4.5.2",
     "jquery": "3.5.1",
     "leaflet": "1.7.1",
@@ -12,8 +11,7 @@
     "react-dom": "^16.13.1",
     "react-leaflet": "2.7.0",
     "react-router-dom": "5.2.0",
-    "react-scripts": "3.4.3",
-    "webpack-dev-server": "3.11.0"
+    "react-scripts": "3.4.3"
   },
   "scripts": {
     "start": "react-scripts start",

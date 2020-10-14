@@ -1,0 +1,21 @@
+{
+  "casas": [
+    {
+      "image": "../img/zz.jpg",
+      "name": "casa unifamiliar",
+      "description": "casa Unifamiliar 3 habitaciones 2 baños un garaje " 
+      
+    },
+    {
+      "image": "../img/zz.jpg",
+      "name": "casa ",
+      "description": "casa 2 habitaciones 1 baños un garaje esta bien acreditada " 
+    },
+    {
+      "image": "../img/zz.jpg",
+      "name": "casa 2do piso",
+      "description": "casa 4 habitaciones 3 baños un patio esta totalmente acabada "      
+    }
+    
+  ]
+}

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../Style/Citas.css";
-
+import { Link, whitRouter } from "react-router-dom";
 import { todos } from "../todos.json";
 
 import TodoForm from "../Componentes/TodoForm";
@@ -31,7 +31,7 @@ class Citas extends Component {
   render() {
     const todos = this.state.todos.map((todo, i) => {
       return (
-        <div className="col-md-4 text-center " key={i}>
+        <div className="col-md-4 text-center py-5 " key={i}>
           <div className="card mt-4">
             <div className="card-title text-center">
               <h3>{todo.title}</h3>
@@ -45,13 +45,22 @@ class Citas extends Component {
                 <mark>{todo.responsible}</mark>
               </p>
             </div>
+            <div className="card-footer text-center">
+              <p>{todo.description}</p>
+            </div>
+            <button
+                className="btn btn-danger"
+                onClick={this.removeTodo.bind(this, i)}
+              >
+                Cancelar cita 
+              </button>
           </div>
         </div>
       );
     });
 
     return (
-      <div className="App py-5">
+      <div className="App">
         <div className="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-danger text-white border-bottom shadow-sm">
           <h5 className="my-0 mr-md-auto font-weight-normal">
             AGENDA TU CITA{" "}
@@ -61,10 +70,10 @@ class Citas extends Component {
           </span>
         </div>
         <div align="center">
-          <img src="../img/logo.jpg" alt="C.D.A C13"/>
+          <img src="../img/logo.jpg" alt="C.D.A C13" />
         </div>
-
-        <div align="center">
+        <div className="container text-center"></div>
+        <div align="container">
           <div className="container "></div>
           <div className="row mt-4">
             <div className="col-md-4 text-center ">
@@ -76,6 +85,11 @@ class Citas extends Component {
               <div className="row">{todos}</div>
             </div>
           </div>
+        </div>
+        <div align="center">
+          <Link className="btn btn-outline-danger" to="/Perfil" role="button">
+            Regresar
+          </Link>{" "}
         </div>
       </div>
     );

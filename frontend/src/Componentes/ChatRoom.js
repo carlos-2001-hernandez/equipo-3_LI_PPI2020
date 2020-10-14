@@ -1,9 +1,13 @@
-import React from "react";
-import { Link, whitRouter } from "react-router-dom";
+import React, { Component } from "react";
+import { Link, whitRouter } from 'react-router-dom';
+class ChatRoom extends Component {
+  render() {
+  
+  
 
-export const Principal = () => {
-  return (
-    <div className="Principal">
+return (
+  <div className="ChatRoom">
+    
       <nav className="navbar navbar-light bg-danger">
         <a className="navbar-brand" href="/">
           <img
@@ -16,96 +20,38 @@ export const Principal = () => {
           />
           C.D.A C13
         </a>
+        <form className="form-inline my-2 my-lg-0">
+        <Link className="btn btn-outline-danger" to="/Citas" role="button">
+              <button className="btn btn-outline-light " type="submit">
+              Agenda Tu cita
+              </button>
+              </Link>{" "}
+            </form>
       </nav>
-      <h3>Viviendas cercanas a tu ubicacion actual</h3>
-      <div className="row">
-        <div className="col-lg-4">
-          <svg
-            className="bd-placeholder-img rounded-circle"
-            width="140"
-            height="140"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid slice"
-            focusable="false"
-            role="img"
-            aria-label="Placeholder: 140x140"
-          >
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#777"></rect>
-            <text x="50%" y="50%" fill="#777" dy=".3em">
-              140x140
-            </text>
-          </svg>
-          <h2>casa unifamiliar</h2>
-          <p>
-            casa unifamiliar 3 habitaciones 2 baños 1 patio y una sala muy
-            grande
-          </p>
-          <p>
-            <a className="btn btn-outline-danger" href="/" role="button">
-              Ver vivienda
-            </a>
-          </p>
+    
+      <div className="container card">
+        <div class="card-body">
+          <ul className="list-group">Mensaje</ul>
         </div>
-        <div className="col-lg-4">
-          <svg
-            className="bd-placeholder-img rounded-circle"
-            width="140"
-            height="140"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid slice"
-            focusable="false"
-            role="img"
-            aria-label="Placeholder: 140x140"
-          >
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#777"></rect>
-            <text x="50%" y="50%" fill="#777" dy=".3em">
-              140x140
-            </text>
-          </svg>
-          <h2>Apartemento</h2>
-          <p>
-            Apartamamento muy grande con 2 baños 4 habitacion pattio y zona de
-            lavado
-          </p>
-          <p>
-            <a className="btn btn-outline-danger" href="/" role="button">
-              Ver vivienda
-            </a>
-          </p>
-        </div>
-        <div className="col-lg-4">
-          <svg
-            className="bd-placeholder-img rounded-circle"
-            width="140"
-            height="140"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid slice"
-            focusable="false"
-            role="img"
-            aria-label="Placeholder: 140x140"
-          >
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#777"></rect>
-            <text x="50%" y="50%" fill="#777" dy=".3em">
-              140x140
-            </text>
-          </svg>
-          <h2>Casa</h2>
-          <p>
-            Casa para una pareja que viva sola 1 habitacion 1 baño sala comedor
-            y aborde de calle
-          </p>
-          <p>
 
-            <a className="btn btn-outline-danger" href="/" role="button">
-              Ver vivienda
-            </a>
-          </p>
+        <div class="card-footer">
+          <input
+            type="text"
+            placeholder="Escribe tu mensaje"
+            onChange={this.updateMessage}
+            className="form-control"
+          />
+          <button
+            onClick={this.submitMessage}
+            className="btn btn-outline-danger btn-block"
+          >
+            Enviar
+          </button>
         </div>
+        
       </div>
-      <div className="nav-scroller py-1 mb-3">
+      
+      <div className="nav-scroller py-5 mb-3">
         <nav className="nav d-flex justify-content-between bg-danger">
           <Link className="button" to="/Mapa">
             <a className="p-2 text-white" href="/">
@@ -169,9 +115,7 @@ export const Principal = () => {
                 <path d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
               </svg>
             </a>
-            </Link>
-
-          
+          </Link>
           <Link className="button" to="/Perfil">
             <a className="p-2 text-white" href="/">
               Perfil
@@ -197,6 +141,10 @@ export const Principal = () => {
           </Link>
         </nav>
       </div>
-    </div>
-  );
-};
+      </div>
+      
+    );
+  }
+}
+
+export default ChatRoom;

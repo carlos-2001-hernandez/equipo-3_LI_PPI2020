@@ -38,7 +38,7 @@ const Home = () => {
           state,
         }}
       >
-        See marker
+        Mostrar ubicacion
       </Link>
     </div>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import "../Style/Body.css";
+import {casas} from '../casas.json'
 import { Link, whitRouter } from 'react-router-dom';
 
 
@@ -111,63 +112,26 @@ export const Body = () => {
         </button>
       </Link>
       </div>
+
+      <div className="container text-center">
+        <h1 className="py-5">Viviendas mas visitadas</h1>
+        <div className="card-deck mb-3 text-center"> 
+        {casas.map((item, index) => {
+          return (
+            <div key={`Data-${index}`}>
+                <div className="col-md-4 ">
+                <div className="card bg-danger mt-4" >
+                  <h3 className="card-title text-white"> {item.name}</h3>
+                  <img src={item.image} alt="Personaje" />
+                  <h5 className="card-text text-white">{item.description}</h5>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+        </div>
+      </div>
       
-      <div className="card">
-        <img src="./img/casa.png" className="card-img-top" alt="..." />
-        <div className="card-body">
-          <h5 className="card-title">Casa Unifamiliar</h5>
-          <p className="card-text">
-            casa Unifamiliar 3 habitaciones 2 baños un garaje esta totalmente
-            acabada
-          </p>
-        </div>
-      </div>
-      <div className="card">
-        <img src="./img/217813699.jpg" className="card-img-top" alt="..." />
-        <div className="card-body">
-          <h5 className="card-title">Casa </h5>
-          <p className="card-text">
-            casa 2 habitaciones 1 baños un garaje esta bien acreditada
-          </p>
-        </div>
-      </div>
-      <div className="card">
-        <img src="./img/casas.jpg" className="card-img-top" alt="..." />
-        <div className="card-body">
-          <h5 className="card-title">Casa 1er piso</h5>
-          <p className="card-text">
-            casa 4 habitaciones 3 baños un patio esta totalmente acabada
-          </p>
-        </div>
-      </div>
-      <div className="card">
-        <img src="./img/vv.jpg" className="card-img-top" alt="..." />
-        <div className="card-body">
-          <h5 className="card-title">Casa Unifamiliar</h5>
-          <p className="card-text">
-            casa 3 habitaciones 2 baños un patio esta como para montar un
-            negocio
-          </p>
-        </div>
-      </div>
-      <div className="card">
-        <img src="./img/zz.jpg" className="card-img-top" alt="..." />
-        <div className="card-body">
-          <h5 className="card-title">Casa Unifamiliar</h5>
-          <p className="card-text">
-            casa Unifamiliar 4 habitaciones 3 baños un patio garaje
-          </p>
-        </div>
-      </div>
-      <div className="card">
-        <img src="./img/mm.jpg" className="card-img-top" alt="..." />
-        <div className="card-body">
-          <h5 className="card-title">Casas 1 piso y 2</h5>
-          <p className="card-text">
-            casas ambas 2 habitaciones 1 baños un patio estan recien terminadas
-          </p>
-        </div>
-      </div>
       <div className="Footer">
         <footer className="container">
           <footer className="container">

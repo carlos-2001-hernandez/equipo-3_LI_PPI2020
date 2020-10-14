@@ -10,6 +10,8 @@ import { Principal} from "../Componentes/Principal";
 import Citas from "../Componentes/Citas";
 import { Perfil} from "../Componentes/Perfil";
 import  Mapa from "../Componentes/Mapa";
+import  ChatRoom from "../Componentes/ChatRoom";
+import { Verificacion} from "../Componentes/Verificacion";
 
 
 import { BrowserRouter, Route } from "react-router-dom";
@@ -28,7 +30,8 @@ export default function Ppicontainer() {
       <Route path="/Citas" exact component={Citas} />
       <Route path="/Perfil" exact component={Perfil} />
       <Route path="/Mapa" exact component={Mapa} />
-      
+      <Route path="/chat" exact component={ChatRoom} />
+      <Route path="/Verificacion" exact component={Verificacion} />
     </BrowserRouter>
     
     
